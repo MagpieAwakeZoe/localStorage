@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>localStroage存储JSON 数组</title>
+</head>
+<body>
+<script>
+	var json={"name":"ww","phone":"12345668"};	//json的实例	单个obj，多属性
+	localStorage.setItem("person",JSON.stringify(json));	
+	//这样就把json存入了localStroage.person里
+	var person=JSON.parse(localStorage.getItem("person"));   
+	//这样就把json对象取出来使用了。
+	console.log(person.name);		//出现ww
+	console.log(person.phone);		//出现12345668
+	</script>
+</body>
+</html>
+<!--1.数组用“[]”创建，对象用“{}”创建，并且使用Json基本都是用[]或者{}创建的数组或对象，否则一个普通的字符串是没有意义的； 
+2.无论是数组还是对象，之间的元素都用“，”隔开； 
+3.对象内部，（属性的）名称和值用“：”隔开，并且必须要用“：”隔开，不可单独存在属性名或者值； 
+4.对象和数组可以互相嵌套，即数组中的一个元素可以是一个对象也可以是一个数组，同理对象中的一个属性的值可以是一个对象也可以是一个数组。 -->

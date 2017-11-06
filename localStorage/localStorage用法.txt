@@ -1,0 +1,29 @@
+localstorage的使用
+1.获取对象
+    var localstroage = window.localStorage;  
+
+
+2.存储值
+    localstroage.setItem('openid','ksjhfkjajkdfjkszdjfksad');  
+    localstroage.setItem('uid','10001');  
+
+
+3.获取值
+    var openid = localstroage.getItem('openid');  
+
+
+4.删除某个值
+    localstroage.removeItem('openid');  
+
+
+5.删除所有值
+    localstroage.clear();  
+
+
+6.遍历所有键值
+    localStorage.uid = 1;  
+    localStorage.sex='nan';  
+    localStorage.age = 23;  
+    for ( var i = 0, len = localStorage.length; i < len; ++i ) {  
+        console.log( localStorage.key( i ) +':' + localStorage.getItem(localStorage.key( i ))  );  
+    }  

@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<body>
+<script>
+var str = '[{"uname":"王宝强","day":"2012/06/17"},{"uname":"李连杰","day":"2012/08/12"}]'; 
+//var jsonList=eval("("+str+")"); 　　　　　　 //eval转换为json对象
+	var jsonList =JSON.parse(str); 			//JSON.parse转换为json对象
+for(var i=0;i<jsonList.length;i++){
+ 　　　　for(var key in jsonList[i]){
+         　　console.log("key："+key+",value："+jsonList[i][key]); 
+        } 
+ 　　}
+</script>
+</body>
+</html>

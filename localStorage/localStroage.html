@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>localStroage用法</title>
+</head>
+
+<body>
+<script>
+	 var localstroage = window.localStorage;  	//获取对象
+		localstroage.setItem('openid','123456');  //存储值
+		localstroage.setItem('Uid','789');  //存储值
+	 var openid = localstroage.getItem('openid');  //获取值
+	 var Uid 	= localstroage.getItem('Uid');  //获取值
+    	console.log(openid);//输出结果是123456
+		console.log(Uid);//输出结果是789
+		localstroage.removeItem('Uid');  	//删除某个值
+		localstroage.clear();  				//删除所有值
+	//遍历所有键值
+    localStorage.uid = 1;  
+    localStorage.sex='nan';  
+    localStorage.age = 23;  
+    for ( var i = 0, len = localStorage.length; i < len; ++i ) {  
+        console.log( localStorage.key( i ) +':' + localStorage.getItem(localStorage.key( i ))  );  
+    }  
+
+	</script>
+</body>
+</html>

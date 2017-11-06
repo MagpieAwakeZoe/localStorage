@@ -1,0 +1,16 @@
+PHP脚本里：
+后端；	session_start();
+		$_SESSION['one'] = $row[2];			//这里one,two是随便取的名字
+		$_SESSION['two'] = $row[3];
+		
+		
+		
+JS脚本里：
+前端：
+		在HTML的BODY部分插入PHP脚本：
+			<?php
+		    session_start();
+			$key1=$_SESSION['one'];			//这里的key1,2也是取的名字
+			$key2=$_SESSION['two'];
+			echo"<p>Welcome back $key1.$key2 </font>"; 
+			?>
